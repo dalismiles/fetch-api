@@ -14,6 +14,7 @@ formEl.addEventListener("submit", function (event) {
   const inputValue = inputEl.value;
   const formattedResearch = inputValue.replaceAll(" ", "+");
   const newApiURL = `${BASE_API_URL}/${formattedResearch}`;
+  inputEl.value = "";
 
   console.log("Chiamata verso:", newApiURL);
 
@@ -25,7 +26,7 @@ formEl.addEventListener("submit", function (event) {
 
       listEl.innerHTML = json.docs
         .map((doc) => {
-          return `<li>${doc.title}</li>`;
+          return `<li class=bookListElement> ${doc.title}, written by ${doc.author_name}</li>`;
         })
         .join("");
     })

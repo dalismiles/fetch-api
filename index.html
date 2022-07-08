@@ -1,29 +1,53 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Find ur book</title>
+    <title>Find your Title!</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
-    <header></header>
+    <header>Find your Title!</header>
+
     <nav class="nav">
       <ul>
-        <li>Home</li>
-        <li>BOOKS</li>
-        <li>MOVIES</li>
-        <li>MUSIC</li>
+        <li class="bookSectionTitle">BOOKS</li>
+        <li class="moviesSectionTitle">MOVIES</li>
+        <li class="movieSectionTitle">MUSIC</li>
       </ul>
     </nav>
+
     <div id="app">
+      <h2 class="welcomeh2">WELCOME TO OUR BOOKS SECTION!</h2>
+      <h3 class="welcomeh3">
+        If you are a booklover* this is the right place for you! There are
+        Millions of books available here.
+      </h3>
+      <p class="welcomep">
+        <a href="https://openlibrary.org/"> Open Library </a> is an open,
+        editable library catalog, building towards a web page for every book
+        ever published. More Just like Wikipedia, you can contribute new
+        information or corrections to the catalog. You can browse by subjects,
+        authors or lists members have created. If you love books, why not help
+        build a library?
+      </p>
+
       <form class="researchBook-form">
-        <input type="text" name="book" />
-        <button>FIND!</button>
+        <input type="text" name="book" placeholder=" write your title here" />
+        <button>search...</button>
       </form>
       <ul class="book-list"></ul>
     </div>
-    <footer></footer>
+
+    <footer>
+      <p>
+        Credits: Background image found on
+        <a href="https://www.pinterest.it/pin/36873290691226315/">Pinterest</a>,
+        Content and books found on
+        <a href="https://openlibrary.org/">Open Library</a>
+      </p>
+    </footer>
+
     <script src="./script.js"></script>
   </body>
 </html>

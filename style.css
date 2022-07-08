@@ -4,33 +4,178 @@ body {
   margin: 0;
   height: 100vh;
   font-family: Raleway;
+  color: #2b2b2b;
+  background-color: #cfe4f6;
 }
 
 header {
   width: 100%;
-  height: 10%;
-  background-color: cadetblue;
+  height: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #2b75ca;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.nav {
+  padding-top: 2rem;
+  width: 100%;
 }
 
 .nav ul {
+  margin: 0;
+  padding: 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
+  gap: 4rem;
   list-style-type: none;
 }
 
+.nav ul li:hover {
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.bookSectionTitle {
+  margin-top: 0;
+  font-weight: bolder;
+}
+
+div {
+  position: relative;
+  padding: 0 3rem 0 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90%;
+}
+
+div .welcomeh2 {
+  justify-content: center;
+}
+
+div .welcomep a {
+  color: #2b2b2b;
+}
+
+form .researchBook-form {
+  padding: 0.2rem 0 0.2rem;
+}
+
+.researchBook-form input {
+  margin: 0;
+  width: 18rem;
+  height: 1.5rem;
+  color: rgb(76, 74, 74);
+  background-color: #2b75ca30;
+  border-color: transparent;
+}
+
+.researchBook-form input::placeholder {
+  color: #2b75ca;
+}
+
+.researchBook-form button {
+  width: 5rem;
+  height: 1.5rem;
+  color: #2b75ca;
+  background-color: #2b75ca30;
+  border-color: transparent;
+  border-radius: 0.5rem;
+  font-family: Raleway;
+  font-weight: 800;
+}
+
+.researchBook-form button:hover {
+  background-color: #2b75ca;
+  color: white;
+}
+
+.book-list {
+  margin: 1rem 0 8rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  list-style-type: none;
+}
+
+::-webkit-scrollbar {
+  width: 1.2rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #cfe4f6;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #2b75ca;
+}
+
+.bookListElement {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 2rem;
+  cursor: pointer;
+}
+
 footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 10%;
-  background-color: cadetblue;
+  height: 7rem;
+  color: white;
+  background-color: #2b75ca;
+  font-size: smaller;
 }
 
-@media only screen and (max-width: 600px) {
-  body {
-    background-color: lightblue;
+footer a {
+  color: white;
+}
+
+@media only screen and (min-width: 800px) {
+  .nav ul {
+    padding: 0 15rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+  }
+
+  div {
+    padding: 1rem 8rem 0 8rem;
+    background: url("./images/reader.gif") fixed no-repeat bottom right;
+    background-size: auto 100%;
+    color: #2b2b2b;
+  }
+
+  div .welcomeh2 {
+    font-size: 3rem;
+  }
+
+  div .welcomep {
+    width: 50%;
+  }
+
+  .book-list {
+    margin-bottom: 6rem;
+    padding: 2rem 2rem 2rem 0;
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem;
   }
 }
